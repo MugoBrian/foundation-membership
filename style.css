@@ -111,3 +111,85 @@ body {
   color: var(--text-muted-custom);
   line-height: 1.6;
 }
+
+/* Membership toggle cards */
+/* ============================================================
+   MEMBERSHIP CARDS
+============================================================ */
+.memberships {
+  background-color: var(--dark-bg);
+}
+
+.membership-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.membership-header {
+  background-color: #4a4535;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.membership-header:hover {
+  background-color: #5a5240;
+}
+
+.membership-label {
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.membership-sublabel {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.toggle-icon {
+  color: var(--gold);
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.collapsed {
+  transform: rotate(180deg);
+}
+
+.membership-body {
+  padding: 0.85rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted-custom);
+  line-height: 1.6;
+  overflow: hidden;
+  max-height: 200px;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease,
+    opacity 0.3s ease;
+  opacity: 1;
+}
+
+.membership-body.hidden {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+}
+
+/* CTA link */
+.cta-link {
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.cta-link:hover {
+  color: var(--white);
+}

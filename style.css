@@ -93,3 +93,21 @@ body {
   font-weight: 700;
   color: var(--white);
 }
+
+/* Recommendation section */
+.recommendation {
+  background-color: var(--dark-bg);
+  border-top: 1px solid #444;
+}
+
+.rec-title {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.rec-body {
+  font-size: 0.8rem;
+  color: var(--text-muted-custom);
+  line-height: 1.6;
+}

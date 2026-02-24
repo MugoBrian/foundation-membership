@@ -113,9 +113,6 @@ body {
 }
 
 /* Membership toggle cards */
-/* ============================================================
-   MEMBERSHIP CARDS
-============================================================ */
 .memberships {
   background-color: var(--dark-bg);
 }
@@ -192,4 +189,39 @@ body {
 
 .cta-link:hover {
   color: var(--white);
+}
+
+/* Footer section */
+.app-footer {
+  background-color: var(--gold);
+  color: var(--dark-bg);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  z-index: 999;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  color: white;
 }

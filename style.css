@@ -20,7 +20,11 @@
 body {
   background-color: var(--body-bg);
   color: var(--white);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 /* Constrain to mobile */
@@ -56,4 +60,36 @@ body {
   font-size: 0.9rem;
   color: var(--text-muted-custom);
   line-height: 1.6;
+}
+
+/* Member stats section */
+.member-stats {
+  background-color: var(--dark-bg);
+}
+
+.member-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.member-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+}
+
+.member-name {
+  font-size: 0.75rem;
+  color: var(--text-muted-custom);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.member-score {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
 }

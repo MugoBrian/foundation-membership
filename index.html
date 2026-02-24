@@ -18,40 +18,46 @@
   </head>
   <body>
     <div class="app-wrapper">
-      <!-- Hero Section -->
-      <section class="profile-hero text-center text-white py-4">
-        <div class="container">
-          <img
-            src="https://randomuser.me/api/portraits/men/80.jpg"
-            alt="Michael's profile photo"
-            class="profile-avatar mb-3"
-          />
-          <h5 class="profile-name mb-2">Michael</h5>
-          <p class="profile-tagline mb-0">
-            You've officially joined <br />
-            your first investment <br />
-            knowledge club!
-          </p>
-        </div>
-      </section>
-      <section class="member-stats p-3">
-        <div class="row g-3" id="membersGrid">
-          <!-- Populated by js  -->
-        </div>
-      </section>
+      <div class="hero-member rounded-3 p-3">
+        <!-- Profile Hero -->
+        <section class="profile-hero text-white py-4 rounded-3 mb-3">
+          <div class="profile-header d-flex align-items-center gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/80.jpg"
+              alt="Michael's profile photo"
+              class="profile-avatar mb-3 pl-4"
+            />
+            <div class="profile-text align-items-baseline d-flex flex-column">
+              <h5 class="profile-name mb-2">Michael</h5>
+              <p class="profile-tagline mb-0">
+                You've officially joined your first investment knowledge club!
+              </p>
+            </div>
+          </div>
+        </section>
 
+        <!-- Member Stats -->
+        <section class="member-stats">
+          <div class="row g-4" id="membersGrid">
+            <!-- Populated by script.js -->
+          </div>
+        </section>
+      </div>
       <!-- Recommendation section -->
-      <section class="recommendation px-3 py-3">
-        <h6 class="rec-title mb-1">Now let's make you great!</h6>
-        <p class="rec-body mb-0">
+      <section class="recommendation px-3 py-4">
+        <h6 class="rec-title mb-2">Now let's make you great!</h6>
+        <p class="rec-subtitle mb-2">
           You have shown us where you are doing well and where we can support
-          you to be great! From your profile we recommend these memberships.
-          Pick on that fits you best and start your financial adventure.
+          you to be great!
+        </p>
+        <p class="rec-body mb-0">
+          From your profile we recommend these memberships. Pick on that fits
+          you best and start your financial adventure.
         </p>
       </section>
 
       <!-- membership toggle cards -->
-      <section class="memberships px-3 py-3">
+      <section class="memberships px-3 pb-4">
         <!-- Foundation Membership -->
         <div class="membership-card mb-3">
           <div
@@ -99,12 +105,11 @@
             </p>
           </div>
         </div>
-
-        <!-- CTA link -->
-        <div class="text-center mt-3">
-          <a href="#" class="cta-link"
-            >A closer look at the memberships details is available here</a
-          >
+        <!-- CTA Link -->
+        <div class="text-center mt-4">
+          <a href="#" class="cta-link">
+            A closer look at the memberships details is available here
+          </a>
         </div>
       </section>
 

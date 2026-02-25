@@ -1,14 +1,14 @@
 /* Global CSS */
 
 :root {
-  --dark-bg: #2b2b2b;
-  --card-bg: #3a3a3a;
-  --gold: #c9a84c;
-  --gold-light: #e4c76b;
-  --text-muted-custom: #aaaaaa;
+  --gold-light: #ebd079;
+  --text-muted-custom: #a0a0a0;
   --white: #ffffff;
   --green: #4caf50;
   --body-bg: #1e1e1e;
+  --gold: #c5a059;
+  --dark-bg: #1a1a1a;
+  --card-bg: #444343;
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: var(--body-bg);
+  background-color: #f5f5f5;
   color: var(--white);
   font-family:
     system-ui,
@@ -29,17 +29,24 @@ body {
 
 /* Constrain to mobile */
 .app-wrapper {
-  max-width: 480px;
-  margin: 0 auto;
-  background-color: var(--dark-bg);
+  width: 100%;
   min-height: 100vh;
-  position: relative;
+  margin: 0 auto;
 }
 
-/* Hero Section */
+.hero-member {
+  background-color: var(--card-bg);
+  text-align: left;
+}
+
+.hero-member {
+  background-color: var(--card-bg);
+  margin: 0.75rem;
+}
+
+/* Hero section */
 .profile-hero {
   background-color: var(--card-bg);
-  padding: 2rem 1rem;
 }
 
 .profile-avatar {
@@ -48,74 +55,120 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--gold);
+  /* display: block; */
+  /* margin: 0 auto; */
 }
 
 .profile-name {
-  font-size: 1.2 rem;
+  font-size: 18px;
   font-weight: 700;
   color: var(--white);
 }
 
 .profile-tagline {
-  font-size: 0.9rem;
+  font-size: 16px;
   color: var(--text-muted-custom);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Member stats section */
-.member-stats {
-  background-color: var(--dark-bg);
-}
-
+/* Member Stats card section*/
 .member-card {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 8px;
+  overflow:hidden;
+  /* text-align: center; */
 }
 
 .member-avatar {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
 }
 
 .member-name {
-  font-size: 0.75rem;
-  color: var(--text-muted-custom);
+  text-align: left;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #49494b;
   text-align: center;
-  margin-bottom: 4px;
+  word-break: break-word;
 }
 
 .member-score {
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--dark-bg);
+}
+
+/* Responsive */
+@media (max-width: 360px) {
+  .profile-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .profile-name {
+    font-size: 18px;
+  }
+
+  .profile-tagline {
+    font-size: 16px;
+  }
+
+  .member-score {
+    font-size: 16px;
+  }
+
+  .member-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 576px) {
+  .profile-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .profile-name {
+    font-size: 1.4rem;
+  }
+
+  .hero-member {
+    margin: 1.2rem;
+  }
 }
 
 /* Recommendation section */
 .recommendation {
-  background-color: var(--dark-bg);
-  border-top: 1px solid #444;
+  border-top: 1px solid #3a3a3a;
+  background-color: var(--card-bg);
+  margin: 0.75rem;
 }
 
 .rec-title {
   color: var(--gold);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 18px;
+}
+
+.rec-subtitle {
+  font-size: 16px;
+  color: var(--gold);
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .rec-body {
-  font-size: 0.8rem;
-  color: var(--text-muted-custom);
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
   line-height: 1.6;
 }
 
 /* Membership toggle cards */
-.memberships {
-  background-color: var(--dark-bg);
-}
 
 .membership-card {
   background-color: var(--card-bg);
@@ -124,35 +177,44 @@ body {
 }
 
 .membership-header {
-  background-color: #4a4535;
+  background-color: #3d3520;
   padding: 0.75rem 1rem;
   cursor: pointer;
   user-select: none;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 
 .membership-header:hover {
-  background-color: #5a5240;
+  background-color: #4a4128;
 }
 
 .membership-label {
   color: var(--gold);
   font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
 }
 
 .membership-sublabel {
   color: var(--white);
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: lighter;
+  font-size: 18px;
   letter-spacing: 1px;
+}
+
+.economy {
+  background-color: #3981b1;
+}
+
+.label-economy {
+  color: var(--white);
 }
 
 .toggle-icon {
   color: var(--gold);
   font-size: 1rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .toggle-icon.collapsed {
@@ -160,9 +222,11 @@ body {
 }
 
 .membership-body {
-  padding: 0.85rem 1rem;
-  font-size: 0.8rem;
-  color: var(--text-muted-custom);
+  padding: 0.9rem 1rem;
+  
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
   line-height: 1.6;
   overflow: hidden;
   max-height: 200px;
@@ -182,9 +246,17 @@ body {
 
 /* CTA link */
 .cta-link {
-  font-size: 0.75rem;
-  color: var(--gold-light);
-  text-decoration: underline;
+  font-size: 14px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.cta {
+  background-color: var(--gold);
+  width: 100%;
 }
 
 .cta-link:hover {
@@ -194,9 +266,10 @@ body {
 /* Footer section */
 .app-footer {
   background-color: var(--gold);
-  color: var(--dark-bg);
-  font-size: 0.7rem;
+  color: var(--white);
+  font-size: 14px;
   font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .whatsapp-fab {
@@ -225,3 +298,93 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
   color: white;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 360px) {
+  .rec-title {
+    font-size: 0.88rem;
+  }
+
+  .rec-subtitle,
+  .rec-body {
+    font-size: 0.78rem;
+  }
+
+  .membership-label,
+  .membership-sublabel {
+    font-size: 0.78rem;
+  }
+
+  .membership-body {
+    font-size: 0.78rem;
+  }
+
+  .cta-link {
+    font-size: 0.72rem;
+  }
+
+  .whatsapp-fab {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+@media (min-width: 576px) {
+  .rec-title {
+    font-size: 1.05rem;
+  }
+
+  .rec-subtitle,
+  .rec-body {
+    font-size: 0.9rem;
+  }
+
+  .membership-body {
+    font-size: 0.9rem;
+  }
+
+  .app-footer {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+  }
+}
+
+/* WEB RESPONSIVENESS */
+
+/* Larger devices (Tablet sizes upwards) */
+
+/* @media (min-width: 576px) {
+  .app-wrapper {
+    /* max-width: 100%; */
+/* border-radius: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  } */
+
+/* body {
+    background-color: #f5f5f5;
+  } */
+/* } */
+
+/* Desktop devices */
+
+/* @media (min-width: 768px) {
+  .app-wrapper {
+    max-width: 520px;
+  }
+  .profile-avatar {
+    width: 96px;
+    height: 96px;
+  }
+  .profile-name {
+    font-size: 1.4rem;
+  }
+  .member-score {
+    font-size: 1.6rem;
+  }
+}  */

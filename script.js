@@ -37,15 +37,17 @@ function renderMembers() {
     .map(
       (member) => `
     <div class="col-6 col-md-3">
-      <div class="member-card d-flex flex-column align-items-center p-3" style="background-color: ${member.color};">
-      <div class="member-header">
-      <img src="${member.avatar}" alt="${member.name}" class="member-avatar mb-2"/>
-        <span class="member-name">${member.name}</span>
-      </div>  
-        <span class="member-score">${member.score}</span>
+      <div class="member-card p-2" style="background-color: ${member.color};">
+        <div class="member-header d-flex gap-2 align-items-center">
+          <img src="${member.avatar}" alt="${member.name}" class="member-avatar mb-2 pl-4"/>
+          <div class="profile-text align-items-baseline d-flex flex-column">
+            <span class="member-name mb-2">${member.name}</span>
+            <span class="member-score">${member.score}</span>
+          </div>
+        </div>  
       </div>
     </div>
-  `
+  `,
     )
     .join("");
 }

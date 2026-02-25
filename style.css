@@ -60,44 +60,43 @@ body {
 }
 
 .profile-name {
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: 700;
   color: var(--white);
 }
 
 .profile-tagline {
-  font-size: 0.85rem;
+  font-size: 16px;
   color: var(--text-muted-custom);
   line-height: 1.7;
 }
 
 /* Member Stats card section*/
 .member-card {
-  text-align: left;
-  padding: 0;
-  border-radius: 10px;
+  border-radius: 8px;
+  overflow:hidden;
   /* text-align: center; */
 }
 
 .member-avatar {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--gold);
 }
 
 .member-name {
+  text-align: left;
   font-size: 14px;
   font-weight: bolder;
   color: #49494b;
   text-align: center;
-  margin-bottom: 4px;
   word-break: break-word;
 }
 
 .member-score {
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 700;
   color: var(--dark-bg);
 }
@@ -105,25 +104,25 @@ body {
 /* Responsive */
 @media (max-width: 360px) {
   .profile-avatar {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
   }
 
   .profile-name {
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .profile-tagline {
-    font-size: 0.78rem;
+    font-size: 16px;
   }
 
   .member-score {
-    font-size: 1.1rem;
+    font-size: 16px;
   }
 
   .member-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -144,33 +143,32 @@ body {
 
 /* Recommendation section */
 .recommendation {
-  background-color: var(--dark-bg);
   border-top: 1px solid #3a3a3a;
+  background-color: var(--card-bg);
+  margin: 0.75rem;
 }
 
 .rec-title {
   color: var(--gold);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 18px;
 }
 
 .rec-subtitle {
-  font-size: 0.85rem;
-  color: var(--white);
+  font-size: 16px;
+  color: var(--gold);
   line-height: 1.6;
   font-weight: 400;
 }
 
 .rec-body {
-  font-size: 0.85rem;
-  color: var(--text-muted-custom);
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
   line-height: 1.6;
 }
 
 /* Membership toggle cards */
-.memberships {
-  background-color: var(--dark-bg);
-}
 
 .membership-card {
   background-color: var(--card-bg);
@@ -193,15 +191,23 @@ body {
 .membership-label {
   color: var(--gold);
   font-weight: 800;
-  font-size: 0.85rem;
+  font-size: 18px;
   letter-spacing: 1.5px;
 }
 
 .membership-sublabel {
   color: var(--white);
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: lighter;
+  font-size: 18px;
   letter-spacing: 1px;
+}
+
+.economy {
+  background-color: #3981b1;
+}
+
+.label-economy {
+  color: var(--white);
 }
 
 .toggle-icon {
@@ -217,9 +223,11 @@ body {
 
 .membership-body {
   padding: 0.9rem 1rem;
-  font-size: 0.85rem;
-  color: var(--text-muted-custom);
-  line-height: 1.7;
+  
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  line-height: 1.6;
   overflow: hidden;
   max-height: 200px;
   transition:
@@ -238,11 +246,17 @@ body {
 
 /* CTA link */
 .cta-link {
-  font-size: 0.78rem;
-  color: var(--gold-light);
-  text-decoration: underline;
+  font-size: 14px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
   text-underline-offset: 3px;
   transition: color 0.2s ease;
+}
+
+.cta {
+  background-color: var(--gold);
+  width: 100%;
 }
 
 .cta-link:hover {
@@ -252,8 +266,8 @@ body {
 /* Footer section */
 .app-footer {
   background-color: var(--gold);
-  color: var(--dark-bg);
-  font-size: 0.7rem;
+  color: var(--white);
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
